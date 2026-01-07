@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>800</width><height>600</height></rect></property>
+
+  <!-- Central widget with a single treeView -->
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTreeView" name="treeView"/>
+    </item>
+   </layout>
+  </widget>
+
+  <!-- Menu bar with a File menu -->
+  <widget class="QMenuBar" name="menubar">
+   <widget class="QMenu" name="menuFile">
+    <property name="title"><string>&amp;File</string></property>
+    <addaction name="actionBackup"/>
+    <addaction name="actionRestore"/>
+    <addaction name="actionBroadcast"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+
+  <!-- Toolbar with your three “add” actions -->
+  <widget class="QToolBar" name="toolBar">
+   <addaction name="actionAddCustomer"/>
+   <addaction name="actionAddItem"/>
+   <addaction name="actionNewTransaction"/>
+  </widget>
+
+  <widget class="QStatusBar" name="statusbar"/>
+
+  <!-- Declare each QAction -->
+  <action name="actionAddCustomer"><property name="text"><string>Add Customer</string></property></action>
+  <action name="actionAddItem"><property name="text"><string>Add Item</string></property></action>
+  <action name="actionNewTransaction"><property name="text"><string>New Transaction</string></property></action>
+  <action name="actionBackup"><property name="text"><string>Backup</string></property></action>
+  <action name="actionRestore"><property name="text"><string>Restore</string></property></action>
+  <action name="actionBroadcast"><property name="text"><string>Broadcast</string></property></action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
